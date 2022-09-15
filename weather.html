@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>WEBAPI</title>
+        <link rel="stylesheet" href="./weather.css">
+    </head>
+    <body>
+        <header>
+            <h1>WebAPI</h1>
+        </header>
+        <section class="searchArea">
+            <select name="cities" id="cities" class="selectCity">
+                <option value="Tokyo" selected>東京</option>
+                <option value="Osaka">大阪</option>
+                <option value="Nagoya">名古屋</option>
+                <option value="Sapporo">札幌</option>
+            </select>
+            <input type="button" id="search" value="検索" class="serachButton"/>
+        </section>
+        <section class="resultArea">
+            <table class="resultTable">
+                <thead>
+                    <tr>
+                        <th>都市</th>
+                        <th>天気</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="city"></td>
+                        <td>
+                            <img id="weatherIcon" src="">
+                            <div id="description"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="./weather.js"></Script>
+    </body>
+</html>
